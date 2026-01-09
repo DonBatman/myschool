@@ -43,6 +43,8 @@ local door2_box = {{-0.5, -0.5, 0, -0.3, 1.5, 1}}
 
 local fountain_box = {{-0.3, -0.1, 0, 0.3, 0.5, 0.5}}
 
+local book_box = {{-0.3, -0.5, -0.3, 0.3, -0.3, 0.3}}
+
 
 local nodes = {--name, description, texture, model, selection_box/collision_box
 			{"chalkboard", "Chaulkboard", "chalkboard", "chalkboard", cboard_box},
@@ -74,6 +76,7 @@ local nodes = {--name, description, texture, model, selection_box/collision_box
 			{"door", "Door", "door", "door", door_box},
 			{"door2", "Door", "door", "door2", door2_box},
 			{"fountain", "Fountain", "fountain", "fountain", fountain_box},
+			{"book_open", "Open Book", "book_open", "book_open", book_box},
 			}
 
 for i in ipairs(nodes) do
