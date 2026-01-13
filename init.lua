@@ -45,6 +45,8 @@ local fountain_box = {{-0.3, -0.1, 0, 0.3, 0.5, 0.5}}
 
 local book_box = {{-0.3, -0.5, -0.3, 0.3, -0.3, 0.3}}
 
+local book2_box = {{-0.4, -0.5, -0.3, 0.2, -0.4, 0.3}}
+
 
 local nodes = {--name, description, texture, model, selection_box/collision_box
 			{"chalkboard", "Chaulkboard", "chalkboard", "chalkboard", cboard_box},
@@ -77,6 +79,7 @@ local nodes = {--name, description, texture, model, selection_box/collision_box
 			{"door2", "Door", "door", "door2", door2_box},
 			{"fountain", "Fountain", "fountain", "fountain", fountain_box},
 			{"book_open", "Open Book", "book_open", "book_open", book_box},
+			{"book_closed", "Closed Book", "book_closed", "book_closed", book2_box},
 			}
 
 for i in ipairs(nodes) do
@@ -103,8 +106,12 @@ core.register_node("myschool:"..nam,{
 		fixed = box
 		},
 })
+	if core.get_modpath("lucky_block") then
+		lucky_block:add_blocks({
+			{"dro", {"myschool:"..nam}, 2},
+		})
+	end
 end
-
 minetest.override_item("myschool:exit_sign",{
 	light_source = 8,})	
 minetest.override_item("myschool:light",{
@@ -120,3 +127,5 @@ minetest.override_item("myschool:door2",{
 	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
 		core.set_node(pos,{name="myschool:door", param2 = node.param2})
 	end})
+
+
