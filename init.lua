@@ -43,6 +43,8 @@ local door2_box = {{-0.5, -0.5, 0, -0.3, 1.5, 1}}
 
 local fountain_box = {{-0.3, -0.1, 0, 0.3, 0.5, 0.5}}
 
+local bookshelf_box = {{-0.5, -0.5, 0, 0.5, 0.5, 0.5}}
+
 local book_box = {{-0.3, -0.5, -0.3, 0.3, -0.3, 0.3}}
 
 local book2_box = {{-0.4, -0.5, -0.3, 0.2, -0.4, 0.3}}
@@ -58,7 +60,7 @@ local nodes = {--name, description, texture, model, selection_box/collision_box
 			{"teacher_desk", "Teacher Desk", "teacher_desk", "teacher_desk", tdesk_box},
 			{"fire_extinguisher", "Fire Extinguisher", "fire_extinguisher", "fire_extinguisher", fe_box},
 			{"fire_extinguisher_large", "Large Fire Extinguisher", "fire_extinguisher", "fire_extinguisher_large", fel_box},
-			{"bookshelf", "Bookshelf", "bookshelf", "bookshelf", book_box},
+			{"bookshelf", "Bookshelf", "bookshelf", "bookshelf", bookshelf_box},
 			{"poster1", "Poster 1", "poster1", "poster", poster_box},
 			{"poster2", "Poster 2", "poster2", "poster", poster_box},
 			{"poster3", "Poster 3", "poster3", "poster", poster_box},
@@ -71,9 +73,9 @@ local nodes = {--name, description, texture, model, selection_box/collision_box
 			{"light", "Light", "light", "light", light_box},
 			{"trash_can", "Trash Can", "trash_can", "trash_can", trash_box},
 			{"ceiling", "Ceiling/Floor", "ceiling", "ceiling", ceiling_box},
-			{"bookshelf_full_1", "Bookshelf", "bookshelf_full_1", "bookshelf_full_1", book_box},
-			{"bookshelf_full_2", "Bookshelf", "bookshelf_full_2", "bookshelf_full_2", book_box},
-			{"bookshelf_full_3", "Bookshelf", "bookshelf_full_3", "bookshelf_full_3", book_box},
+			{"bookshelf_full_1", "Bookshelf", "bookshelf_full_1", "bookshelf_full_1", bookshelf_box},
+			{"bookshelf_full_2", "Bookshelf", "bookshelf_full_2", "bookshelf_full_2", bookshelf_box},
+			{"bookshelf_full_3", "Bookshelf", "bookshelf_full_3", "bookshelf_full_3", bookshelf_box},
 			{"window", "Window", "window", "window", window_box},
 			{"door", "Door", "door", "door", door_box},
 			{"door2", "Door", "door", "door2", door2_box},
