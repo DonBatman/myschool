@@ -129,5 +129,3 @@ minetest.override_item("myschool:door2",{
 	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
 		core.set_node(pos,{name="myschool:door", param2 = node.param2})
 	end})
-
-
